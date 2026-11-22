@@ -54,7 +54,7 @@ public static class Calc
         if( ! MyKuList[0].isContainWho &&  ! MyKuList[1].isContainWho && ! MyKuList[2].isContainWho)
         {
             score += 10;
-            comment = "誰をしたのかを書くともっとよいぞ";
+            comment = "誰がしたのかを書くともっとよいぞ";
         }
         else if (  MyKuList[0].isContainWho &&  MyKuList[1].isContainWho&& MyKuList[2].isContainWho)
         {
