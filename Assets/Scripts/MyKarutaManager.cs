@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using System.Diagnostics.Tracing;
 public class MyKarutaManager : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI textUI1; 
@@ -15,4 +16,20 @@ public class MyKarutaManager : MonoBehaviour
 
         transform.position = initPos;
     } 
+
+    public void SetKu(int pos, string text)
+    {
+        if(pos == 0)
+        {
+            textUI1.text = text;
+        }
+        else if(pos == 1)
+        {
+            textUI2.text = text;
+        }
+        else
+        {
+            textUI3.text = text;
+        }
+    }
 }

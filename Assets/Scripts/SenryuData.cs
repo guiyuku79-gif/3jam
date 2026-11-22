@@ -20,13 +20,18 @@ public static class SenryuData
     {
         new KuData
         {
-            name = "夕暮れに",
-            nameLen = 5,
+            name = "夕暮れ時に",
+            nameLen = 7,
         },
         new KuData
         {
             name = "奥山に",
             nameLen = 5,
+        },
+        new KuData
+        {
+            name = "最大級に",
+            nameLen = 7,
         },
         new KuData
         {

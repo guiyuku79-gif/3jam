@@ -8,11 +8,15 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject MyKarutaPrefab;
 
     List<KuData> KuList = new();
+    List<KuData> MyKuList = new();
 
     Dictionary<int,KuData> choiceDict = new Dictionary<int, KuData>();
+    List<OneKuManager> oneKuManagers = new();
 
     KarutaManager karutaManager;
     MyKarutaManager myKarutaManager;
+
+    int currentPos = 0;
 
     void Start()
     {
@@ -39,6 +43,7 @@ public class GameManager : MonoBehaviour
             
             GameObject oneKuPrefab = Instantiate(OneKuPrefab);
             oneKuPrefab.GetComponent<OneKuManager>().Init(text.name,i,OnObjectClicked);
+            oneKuManagers.Add(oneKuPrefab.GetComponent<OneKuManager>());
             choiceDict.Add(i,text);
         }
 
@@ -47,10 +52,50 @@ public class GameManager : MonoBehaviour
         myKarutaManager = myKarutaPrefab.GetComponent<MyKarutaManager>();
         myKarutaManager.Init();
         
+        currentPos = 0;
     }
 
     void OnObjectClicked(int id)
     {
         Debug.Log("クリックされたオブジェクトのID：" + id);
+        if( currentPos == 0 || currentPos == 2)
+        {
+            if(choiceDict[id].nameLen == 5)
+            {
+                myKarutaManager.SetKu(currentPos,choiceDict[id].name);
+                MyKuList.Add(choiceDict[id]);
+            }
+            else
+            {
+                return;
+            }
+        }
+        else
+        {
+            if(choiceDict[id].nameLen == 7)
+            {
+                myKarutaManager.SetKu(currentPos,choiceDict[id].name);
+                MyKuList.Add(choiceDict[id]);
+            }
+            else
+            {
+                return;
+            }
+        }
+
+        if (currentPos == 2)
+        {
+            CompletedHaiku();
+        }
+        else
+        {
+            currentPos += 1;
+        }
+    }
+
+    void CompletedHaiku(){
+        Debug.Log("完成");
+        var result = Calc.CalcPoint(KuList,MyKuList,0);
+        
     }
 }
