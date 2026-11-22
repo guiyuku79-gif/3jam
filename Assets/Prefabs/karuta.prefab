@@ -625,4 +625,4 @@ MonoBehaviour:
   textUI1: {fileID: 2169616166557229673}
   textUI2: {fileID: 1576087649058840741}
   textUI3: {fileID: 7861885815170710168}
-  initPos: {x: 3, y: 2, z: 0}
+  initPos: {x: 3, y: 2.2, z: 0}
