@@ -402,6 +402,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 612824123}
+  - component: {fileID: 612824124}
   m_Layer: 0
   m_Name: UIManager
   m_TagString: Untagged
@@ -424,6 +425,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &612824124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 612824122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49317f8d9b562d144ae125a6a0e9faa6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIManager
+  result: {fileID: 947703595}
+  pointUI: {fileID: 1317450870}
+  textUI: {fileID: 1264037244}
 --- !u!1 &614202563
 GameObject:
   m_ObjectHideFlags: 0
@@ -653,7 +669,7 @@ Transform:
   m_GameObject: {fileID: 947703595}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -18, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -983,7 +999,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -1397,6 +1413,7 @@ MonoBehaviour:
   karutaPrefab: {fileID: 8925431804040190371, guid: 927be794622c46849bd6f0956870cc81, type: 3}
   OneKuPrefab: {fileID: 771400748643045712, guid: 3902cc0ddef82e4498dc66664b3139b9, type: 3}
   MyKarutaPrefab: {fileID: 8925431804040190371, guid: 92a8eb00052acb2419ad3bb7b7178082, type: 3}
+  uIManager: {fileID: 612824124}
 --- !u!1 &1954739698
 GameObject:
   m_ObjectHideFlags: 0

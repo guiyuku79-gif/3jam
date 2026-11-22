@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject karutaPrefab;
     [SerializeField] GameObject OneKuPrefab;
     [SerializeField] GameObject MyKarutaPrefab;
+    [SerializeField] UIManager uIManager;
 
     List<KuData> KuList = new();
     List<KuData> MyKuList = new();
@@ -96,6 +97,7 @@ public class GameManager : MonoBehaviour
     void CompletedHaiku(){
         Debug.Log("完成");
         var result = Calc.CalcPoint(KuList,MyKuList,0);
-        
+        uIManager.ShowResult(result.point,result.comment);
+
     }
 }
