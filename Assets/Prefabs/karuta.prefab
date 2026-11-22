@@ -526,6 +526,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7706987921862410083}
   - component: {fileID: 7861193879861434671}
+  - component: {fileID: 6965929352288117358}
   m_Layer: 0
   m_Name: karuta
   m_TagString: Untagged
@@ -609,3 +610,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!114 &6965929352288117358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8925431804040190371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 227be2000914f804bb8533b6472a5120, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::KarutaManager
+  textUI1: {fileID: 2169616166557229673}
+  textUI2: {fileID: 1576087649058840741}
+  textUI3: {fileID: 7861885815170710168}
+  initPos: {x: 3, y: 2, z: 0}

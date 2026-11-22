@@ -720,6 +720,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a46a80e86aee8044394290fe2fb21a8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  karutaPrefab: {fileID: 8925431804040190371, guid: 927be794622c46849bd6f0956870cc81, type: 3}
+  KuList: []
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
